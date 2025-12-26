@@ -1,0 +1,222 @@
+/* Importando Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Georgia&family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap');
+
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: 'Georgia', serif;
+    
+    background-position: center;
+    background-size: cover;
+    animation: abrirCaixa 0.8s ease-out forwards;
+    opacity: 0;
+    
+}
+
+.page-galeria {
+    min-height: 100vh;
+    position: relative;
+    background-image: url("img/galeria.png");    
+    box-shadow: 0 15px 30px rgba(167, 77, 42, 0.15) !important;
+
+    
+}
+
+/* Cabeçalho com fundo terracota */
+
+.bg-terracotta-fixed {
+    background-color: #a74d2a;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    background-image: url('img/inicio.png');
+    
+}
+.overlay-layer {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.overlay-header {
+    
+    color: #000;
+    
+
+
+}
+
+/* Botão Voltar Fixo */
+.btn-voltar-fixed {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1050;
+    background: #000;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar-fixed:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #fff !important;
+    transform: scale(1.05);
+}
+
+/* --- ANIMAÇÃO DE ENTRADA --- */
+
+.texto-destaque {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(194, 101, 83, 0.4);
+    backdrop-filter: blur(5px); /* Efeito de vidro */
+    border-radius: 50px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@keyframes abrirCaixa {
+    0% { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* --- CARDS DE PRODUTOS --- */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-image: url(img/cartao_fundo.jpg);
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    
+    
+    
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(167, 77, 42, 0.15) !important;
+}
+
+/* Container da imagem no card */
+.card-img-container {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background-position: center;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 30px;
+    border: 1px solid #e8e0ae !important;
+}
+
+.card-img-container:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Imagem clicável */
+.img-expandable {
+    cursor: zoom-in;
+}
+
+/* --- CORES PERSONALIZADAS --- */
+.text-terracotta { 
+    color: #fff !important; 
+}
+
+/* Botão do WhatsApp */
+.btn-whatsapp {
+    background-color: #25d365;
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1da851;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* --- MODAL DE IMAGEM AMPLIADA --- */
+.modal-img-expanded {
+    max-height: 70vh;
+    width: auto;
+    max-width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustes do modal */
+.modal-content.bg-dark.bg-opacity-90 {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Título do modal */
+.modal-title  {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .overlay-header {
+        padding: 60px 15px;
+        min-height: 200px;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .card-img-top {
+        height: 350px;
+    }
+    
+    .btn-voltar-fixed {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        top: 15px;
+        left: 15px;
+    }
+    
+    .modal-img-expanded {
+        max-height: 50vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .card-img-top {
+        height: 300px;
+    }
+    
+    .modal-dialog {
+        margin: 10px;
+    }
+}
