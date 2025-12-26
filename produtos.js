@@ -39,7 +39,6 @@ const produtos = [
     }
 ];
 
-// --- LÓGICA DO SITE (Não precisa mexer muito aqui) ---
 
 const container = document.getElementById('lista-produtos');
 
@@ -62,7 +61,7 @@ produtos.forEach(produto => {
     }  else {
         // Se disponível: Botão WhatsApp verde
         
-        // 1. Pega o endereço completo da imagem (Ex: https://seusite.com/img/peca.jpeg)
+        // 1. Pega o endereço completo da imagem
         const urlImagem = new URL(produto.imagem, document.baseURI).href;
 
         // 2. Monta a mensagem com quebra de linha (\n) e o link da foto
@@ -118,4 +117,5 @@ function abrirModal(imagem, nome, preco) {
     const modalElement = document.getElementById('modalProduto');
     const modalBootstrap = new bootstrap.Modal(modalElement);
     modalBootstrap.show();
+
 }
