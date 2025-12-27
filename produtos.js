@@ -2,37 +2,37 @@
 
 const produtos = [
     {
-        nome: "Conjunto",
+        nome: "Conjunto Alice",
         preco: 25.00,
         imagem: "img/peca.jpeg",
         vendido: false // Está disponível
     },
     {
-        nome: "Conjunto",
+        nome: "Conjunto Beatriz",
         preco: 25.00,
         imagem: "img/peca2.jpeg",
         vendido: false
     },
     {
-        nome: "Conjunto",
+        nome: "Conjunto Camila",
         preco: 25.00,
         imagem: "img/peca3.jpeg", 
         vendido: false 
     },
     {
-        nome: "Conjunto",
+        nome: "Conjunto Daniele",
         preco: 25.00,
         imagem: "img/peca4.jpeg", 
         vendido: false 
     },
     {
-        nome: "Conjunto",
+        nome: "Conjunto Helena",
         preco: 25.00,
         imagem: "img/peca5.jpeg", 
         vendido: false 
     },
     {
-        nome: "Conjunto",
+        nome: "Conjunto Isabela",
         preco: 25.00,
         imagem: "img/peca6.jpeg", 
         vendido: false 
@@ -119,3 +119,4 @@ function abrirModal(imagem, nome, preco) {
     modalBootstrap.show();
 
 }
+
