@@ -26,13 +26,13 @@ const produtos = [
         vendido: false 
     },
     {
-        nome: "Conjunto Helena",
+        nome: "Conjunto Eduarda",
         preco: 25.00,
         imagem: "img/peca5.jpeg", 
         vendido: false 
     },
     {
-        nome: "Conjunto Isabela",
+        nome: "Conjunto Felícia",
         preco: 25.00,
         imagem: "img/peca6.jpeg", 
         vendido: false 
@@ -119,4 +119,5 @@ function abrirModal(imagem, nome, preco) {
     modalBootstrap.show();
 
 }
+
 
